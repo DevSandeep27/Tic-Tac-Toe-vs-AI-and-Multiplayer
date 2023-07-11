@@ -6,7 +6,7 @@ A simple Tic-Tac-Toe game in Python.
 
 * Player can play against the AI or another player.
 * The AI uses the min-max algorithm to make its moves.
-* The sad part is you can't win against the AI. Either the AI wins or the match draws!!
+* The sad part is you can't win against the AI. Either the AI wins or the match draws!! :(
 
 ## How to play
 

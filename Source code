@@ -1,27 +1,27 @@
 def ConstBoard(board):
-  print("Current State of Board: \n\n")
+  print("\n\nCURRENT STATE OF BOARD :\n")
   for i in range(0,9):
     if((i>0) and (i%3==0)):
       print("\n")
     if(board[i]==0):
-      print("_", end=" ")
+      print("_ ", end=" ")
     if(board[i]==-1):
-      print("X", end=" ")
+      print("X ", end=" ")
     if(board[i]==1):
-      print("O", end=" ")
+      print("O ", end=" ")
   print("\n\n")
 
 def User1Turn(board):
-  pos = int(input("Enter X's position from [1,2,3,...,9]"))
+  pos = int(input("Enter X's position from [1,2,3,...,9]-->"))
   if(board[pos-1] != 0):
-    print("Wrong Move!")
+    print("!! Wrong Move !!")
     exit(0)
   board[pos-1]=-1
 
 def User2Turn(board):
-  pos = int(input("Enter O's position from [1,2,3,...,9]"))
+  pos = int(input("Enter O's position from [1,2,3,...,9]-->"))
   if(board[pos-1] != 0):
-    print("Wrong Move!")
+    print("!! Wrong Move !!")
     exit(0)
   board[pos-1]=1
 
@@ -68,11 +68,11 @@ def analyzeboard(board):
 
 
 def main():
-  choice = int(input("Enter 1 for SinglePlayer, 2 for Multiplayer:"))
+  choice = int(input("Enter 1 to play against AI & 2 for Multiplayer: "))
   board = [0, 0, 0, 0, 0, 0, 0, 0, 0]
   if(choice==1):
-    print("Computer: 0 Vs. You: X")
-    player = int(input("Enter to play 1(st) or 2(nd): "))
+    print("\nCOMPUTER--> 0 vs YOU--> X\n")
+    player = int(input("Enter to 1 play 1st or 2 to play 2nd: "))
     for i in range(0, 9):
       if(analyzeboard(board) != 0):
         break
@@ -96,10 +96,10 @@ def main():
   x = analyzeboard(board)
   if(x==0):
     ConstBoard(board)
-    print("Draw!")
+    print("!!!! DRAW !!!!")
   if(x==-1):
     ConstBoard(board)
-    print("Player X Wins !! O Looses!")
+    print("!! PLAYER X WINS !! O LOOSES !!")
   if(x==1):
     ConstBoard(board)
-    print("Player O Wins !! X Looses!")
+    print("!! PLAYER O WINS !! X LOOSES !!")

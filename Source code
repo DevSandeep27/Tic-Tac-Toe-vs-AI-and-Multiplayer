@@ -103,3 +103,5 @@ def main():
   if(x==1):
     ConstBoard(board)
     print("!! PLAYER O WINS !! X LOOSES !!")
+
+main()
